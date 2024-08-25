@@ -1,0 +1,49 @@
+/*  -----  HEADER -----  */
+
+.header {
+    font-size: 30px;
+    display: flex;
+    justify-content:space-between;
+    border: 2px solid black;
+}
+
+.logo {
+    width: 200px;
+}
+
+.nav-items > ul {
+    display:flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li {
+    padding : 10px;
+    margin : 10px
+}
+
+
+/* ----- Body ----- */
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.res-card{
+    width:250px;
+    margin: 10px;
+    padding:5px;
+    background-color: bisque;
+}
+
+.res-card:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.res-logo{
+    width: 100%;
+}
+
