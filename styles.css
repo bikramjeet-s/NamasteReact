@@ -23,6 +23,9 @@
 
 
 /* ----- Body ----- */
+.filter{
+margin: 5px 0px;
+}
 
 .res-container{
     display: flex;
