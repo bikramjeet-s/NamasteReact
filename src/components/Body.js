@@ -8,6 +8,10 @@ const Body = () => {
 
   const [listOfRestaurants, setlistOfRestaurants] = useState(resObj);
 
+  // const arr = useState(resObj);
+  // const listOfRestaurants = arr[0];
+  // const setlistOfRestaurants = arr[1]; This achievest t===
+
   const handleClick = () => {
     const resData = resObj.filter((res) => res.info.avgRating >= 4);
 
