@@ -21,10 +21,18 @@
     margin : 10px
 }
 
+.login-btn{
+    height: 30px;
+}
 
 /* ----- Body ----- */
 .filter{
+display: flex;
 margin: 5px 0px;
+}
+
+.search{
+    margin: 0 10px 0 0;
 }
 
 .res-container{
@@ -47,6 +55,22 @@ margin: 5px 0px;
 }
 
 .res-logo{
+    height: 200px;
     width: 100%;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+.shimmer-card{
+    height: 400px;
+    width: 200px;
+    background-color: cornsilk;
+    border:10px;
+    border-style: double;
+    margin: 10px 10px;
 }
 
