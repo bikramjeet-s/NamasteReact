@@ -43,7 +43,7 @@ margin: 5px 0px;
 }
 
 .res-card{
-    width:250px;
+    width: 250px;
     margin: 10px;
     padding:5px;
     background-color: bisque;
@@ -62,15 +62,13 @@ margin: 5px 0px;
 .shimmer-container{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
+    justify-content: space-around;
 }
 
 .shimmer-card{
     height: 400px;
     width: 200px;
-    background-color: cornsilk;
-    border:10px;
-    border-style: double;
+    background-color: #C4DAD2;
     margin: 10px 10px;
 }
 
