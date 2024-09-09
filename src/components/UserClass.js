@@ -1,25 +1,42 @@
 import React from 'react';
-import Comp from './Comp';
 
 class UserClass extends React.Component{
     constructor(props){
         super(props)
-
         this.state = {
             count:0,
-            // count2:0
+            userInfo : {
+                name : "Bikram",
+                location : "Mohali"
+            }
         }
 
         console.log(this.props.name + " About Constructor Called")
     }
 
-    componentDidMount(){
+    async componentDidMount(){
         console.log(this.props.name + " About mounted")
+
+        const data = await fetch("https://api.github.com/users/bikramjeet-s");
+        const jsonData = await data.json()
+        this.setState(
+            {
+                userInfo : jsonData
+            }
+        )
+    }
+
+    componentDidUpdate(){
+        console.log("update called")
+    }
+
+    componentWillUnmount(){
+        console.log("User-card is unmounted")
     }
 
     render(){
         console.log(this.props.name + " About Render Called")
-
+        const {login, created_at, avatar_url} = this.state.userInfo;
         const {count} = this.state
         const handleClick =() =>{
             this.setState({
@@ -37,11 +54,10 @@ class UserClass extends React.Component{
                 <button onClick={handleClick}>Count Increase</button>
                 {/* <h1>Count2 : {this.state.count2}</h1>
                 <button onClick={handleClick2}>Count2 Increase</button> */}
-                <h2>Name: {this.props.name}</h2>
-                <h3>Location: {this.props.location}</h3>
+                <img src={avatar_url}/>
+                <h2>Name: {login}</h2>
+                <h3>Location: {created_at}</h3>
                 <h3>Contact Info: bikram@gmail.com</h3>
-                <Comp name="Shit1" parent={this.props.name} />
-                <Comp name= "Shit2" parent = {this.props.name}/>
             </div>
         )
     }

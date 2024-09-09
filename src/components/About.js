@@ -19,8 +19,8 @@ class About extends Component{
             <h1>About Us</h1>
             <h2>Yes! This is me.</h2>
             {/* <User name={"Bikram @ functional"} location={"Chandigarh"}></User> */}
-            <UserClass name = {"Child1"} location={"Chandigarh"}/>
-            <UserClass name = {"Child2"} location={"Mohali"}/>
+            <User name = {"Function"} location={"Chandigarh"}/>
+            <UserClass name = {"Class"} location={"Mohali"}/>
             {console.log("About Rendered")}
         </div>
         )
